@@ -2,12 +2,12 @@
 Summary:	New logs analyzer and parser
 Summary(pl):	Nowy analizator i parser logów
 Name:		epylog
-Version:	1.0.1
+Version:	1.0.3
 Release:	1
 License:	GPL
 Group:		Applications/System
 Source0:	http://linux.duke.edu/projects/epylog/download/%{name}-%{version}.tar.gz
-# Source0-md5:	051ff19d4071c4e0dfd55db18c481b60
+# Source0-md5:	6beedd62e0d59d6309ae1f537fc75772
 URL:		http://linux.duke.edu/projects/epylog/
 BuildRequires:	python-libxml2
 BuildRequires:	rpm-perlprov >= 4.1-13
