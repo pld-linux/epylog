@@ -66,6 +66,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/epylog
 %{py_libdir}/site-packages/epylog
 %{_mandir}/man[58]/*
+%attr(750,root,root) %dir %{_var}/lib/epylog
 
 %files perl
 %defattr(644,root,root,755)
