@@ -9,9 +9,9 @@ Group:		Applications/System
 Source0:	http://linux.duke.edu/projects/epylog/download/%{name}-%{version}.tar.gz
 # Source0-md5:	051ff19d4071c4e0dfd55db18c481b60
 URL:		http://linux.duke.edu/projects/epylog/
+BuildRequires:	python-libxml2
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	rpm-pythonprov
-BuildRequires:	python-libxml2
 Requires:	python-libxml2
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -24,17 +24,33 @@ output. It is written specifically with large network clusters in mind
 where a lot of machines (around 50 and upwards) log to the same
 loghost using syslog or syslog-ng.
 
+%description -l pl
+Epylog to nowe narzêdzie do powiadamiania i analizy logów uruchamiane
+regularnie z crona, przegl±daj±ce logi, przetwarzaj±ce wpisy w celu
+prezentacji ich w bardziej wyczerpuj±cym formacie, a nastêpnie
+dostarczaj±cym wyj¶cie. Jest napisany z my¶l± o du¿ych klastrach
+sieciowych, gdzie du¿o maszyn (oko³o 50 i wiêcej) wysy³a logi na ten
+sam host przy u¿yciu sysloga lub syslog-ng.
+
 %package perl
 Summary:	Perl module for writing external Epylog modules
+Summary(pl):	Modu³ Perla do pisania zewnêtrznych modu³ów Epyloga
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description perl
-This package provides a perl module for epylog. It is useful for
+This package provides a Perl module for epylog. It is useful for
 writing epylog modules that use external module API. No modules
 shipping with epylog by default use that API, so install this only if
-you are using external perl modules, or intend to write some of your
+you are using external Perl modules, or intend to write some of your
 own.
+
+%description perl -l pl
+Ten pakiet dostarcza modu³ Perla dla epyloga. Jest przydatny do
+pisania modu³ów epyloga u¿ywaj±cych API dla zewnêtrznych modu³ów.
+¯aden modu³ dostarczany domy¶lnie z epylogiem nie u¿ywa tego API,
+wiêc pakiet nale¿y instalowaæ tylko je¶li u¿ywamy zewnêtrznych modu³ów
+Perla lub zamierzamy napisaæ jakie¶ w³asne.
 
 %prep
 %setup -q
@@ -64,7 +80,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(600,root,root) %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/epylog/*.[cxhl]*
 %attr(600,root,root) %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/epylog/modules.d/*.conf
 %{_datadir}/epylog
-%{py_libdir}/site-packages/epylog
+%{py_sitedir}/epylog
 %{_mandir}/man[58]/*
 %attr(750,root,root) %dir %{_var}/lib/epylog
 
