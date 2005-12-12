@@ -47,8 +47,8 @@ own.
 %description perl -l pl
 Ten pakiet dostarcza modu³ Perla dla epyloga. Jest przydatny do
 pisania modu³ów epyloga u¿ywaj±cych API dla zewnêtrznych modu³ów.
-¯aden modu³ dostarczany domy¶lnie z epylogiem nie u¿ywa tego API,
-wiêc pakiet nale¿y instalowaæ tylko je¶li u¿ywamy zewnêtrznych modu³ów
+¯aden modu³ dostarczany domy¶lnie z epylogiem nie u¿ywa tego API, wiêc
+pakiet nale¿y instalowaæ tylko je¶li u¿ywamy zewnêtrznych modu³ów
 Perla lub zamierzamy napisaæ jakie¶ w³asne.
 
 %prep
@@ -76,8 +76,8 @@ rm -rf $RPM_BUILD_ROOT
 %attr(700,root,root) /etc/cron.daily/*.*
 %attr(750,root,root) %dir %{_sysconfdir}/epylog
 %dir %{_sysconfdir}/epylog/modules.d
-%attr(600,root,root) %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/epylog/*.[cxhl]*
-%attr(600,root,root) %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/epylog/modules.d/*.conf
+%attr(600,root,root) %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/epylog/*.[cxhl]*
+%attr(600,root,root) %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/epylog/modules.d/*.conf
 %{_datadir}/epylog
 %{py_sitedir}/epylog
 %{_mandir}/man[58]/*
