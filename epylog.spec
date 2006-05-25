@@ -11,6 +11,7 @@ Source0:	http://linux.duke.edu/projects/epylog/download/%{name}-%{version}.tar.g
 URL:		http://linux.duke.edu/projects/epylog/
 BuildRequires:	python-libxml2
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	perl-perldoc
 Requires:	python-libxml2
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
