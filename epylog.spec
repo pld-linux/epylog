@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.perl
 Summary:	New logs analyzer and parser
-Summary(pl):	Nowy analizator i parser logów
+Summary(pl.UTF-8):   Nowy analizator i parser logÃ³w
 Name:		epylog
 Version:	1.0.3
 Release:	1
@@ -24,17 +24,17 @@ output. It is written specifically with large network clusters in mind
 where a lot of machines (around 50 and upwards) log to the same
 loghost using syslog or syslog-ng.
 
-%description -l pl
-Epylog to nowe narzêdzie do powiadamiania i analizy logów uruchamiane
-regularnie z crona, przegl±daj±ce logi, przetwarzaj±ce wpisy w celu
-prezentacji ich w bardziej wyczerpuj±cym formacie, a nastêpnie
-dostarczaj±cym wyj¶cie. Jest napisany z my¶l± o du¿ych klastrach
-sieciowych, gdzie du¿o maszyn (oko³o 50 i wiêcej) wysy³a logi na ten
-sam host przy u¿yciu sysloga lub syslog-ng.
+%description -l pl.UTF-8
+Epylog to nowe narzÄ™dzie do powiadamiania i analizy logÃ³w uruchamiane
+regularnie z crona, przeglÄ…dajÄ…ce logi, przetwarzajÄ…ce wpisy w celu
+prezentacji ich w bardziej wyczerpujÄ…cym formacie, a nastÄ™pnie
+dostarczajÄ…cym wyjÅ›cie. Jest napisany z myÅ›lÄ… o duÅ¼ych klastrach
+sieciowych, gdzie duÅ¼o maszyn (okoÅ‚o 50 i wiÄ™cej) wysyÅ‚a logi na ten
+sam host przy uÅ¼yciu sysloga lub syslog-ng.
 
 %package perl
 Summary:	Perl module for writing external Epylog modules
-Summary(pl):	Modu³ Perla do pisania zewnêtrznych modu³ów Epyloga
+Summary(pl.UTF-8):   ModuÅ‚ Perla do pisania zewnÄ™trznych moduÅ‚Ã³w Epyloga
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -45,12 +45,12 @@ shipping with epylog by default use that API, so install this only if
 you are using external Perl modules, or intend to write some of your
 own.
 
-%description perl -l pl
-Ten pakiet dostarcza modu³ Perla dla epyloga. Jest przydatny do
-pisania modu³ów epyloga u¿ywaj±cych API dla zewnêtrznych modu³ów.
-¯aden modu³ dostarczany domy¶lnie z epylogiem nie u¿ywa tego API, wiêc
-pakiet nale¿y instalowaæ tylko je¶li u¿ywamy zewnêtrznych modu³ów
-Perla lub zamierzamy napisaæ jakie¶ w³asne.
+%description perl -l pl.UTF-8
+Ten pakiet dostarcza moduÅ‚ Perla dla epyloga. Jest przydatny do
+pisania moduÅ‚Ã³w epyloga uÅ¼ywajÄ…cych API dla zewnÄ™trznych moduÅ‚Ã³w.
+Å»aden moduÅ‚ dostarczany domyÅ›lnie z epylogiem nie uÅ¼ywa tego API, wiÄ™c
+pakiet naleÅ¼y instalowaÄ‡ tylko jeÅ›li uÅ¼ywamy zewnÄ™trznych moduÅ‚Ã³w
+Perla lub zamierzamy napisaÄ‡ jakieÅ› wÅ‚asne.
 
 %prep
 %setup -q
