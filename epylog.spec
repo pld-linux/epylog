@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.perl
 Summary:	New logs analyzer and parser
-Summary(pl.UTF-8):   Nowy analizator i parser logów
+Summary(pl.UTF-8):	Nowy analizator i parser logów
 Name:		epylog
 Version:	1.0.3
 Release:	1
@@ -34,7 +34,7 @@ sam host przy użyciu sysloga lub syslog-ng.
 
 %package perl
 Summary:	Perl module for writing external Epylog modules
-Summary(pl.UTF-8):   Moduł Perla do pisania zewnętrznych modułów Epyloga
+Summary(pl.UTF-8):	Moduł Perla do pisania zewnętrznych modułów Epyloga
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
