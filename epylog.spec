@@ -1,4 +1,3 @@
-%include	/usr/lib/rpm/macros.perl
 Summary:	New logs analyzer and parser
 Summary(pl.UTF-8):	Nowy analizator i parser logów
 Name:		epylog
